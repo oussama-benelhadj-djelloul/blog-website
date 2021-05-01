@@ -6,13 +6,11 @@ const router = require('./router/router')
 const homectrl = require('./controller/homectrl')
 const Article = require('./model/blog')
 const bodyParser = require('body-parser')
-var cors = require('cors')
 const path = require('path')
 const moment = require('moment');
 const port = process.env.PORT || 3000;
 
 
-app.use(cors());
 
 // create application/json parser
 var jsonParser = bodyParser.json()
