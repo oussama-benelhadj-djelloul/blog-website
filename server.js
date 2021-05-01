@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 var cors = require('cors')
 const path = require('path')
 const moment = require('moment');
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 3000;
 
 
 app.use(cors());
@@ -118,6 +118,4 @@ app.get('/article/delete/:id', function (req, res) {
     })
 })
 
-app.listen(port, function (req, res) {
-    console.log('server is running')
-})
+app.listen(port)
