@@ -1,0 +1,36 @@
+<%- include ("partial/_header");%>
+
+<div class="container-fluid hero-sec">
+
+</div>
+
+<div class="container" style="transform: translateY(-100px)">
+    <div class="row">
+
+        <% for(var i = 0; i < article.length; i++) {%>
+        <div class="col-md-4 p-2">
+            <div class="card mx-auto " style="width: 100%; height: 205px">
+                <div class="card-body">
+                    <h5 class="card-title"><%= article[i].title %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted pb-2"><%= article[i].author %> |
+                        <%=  article[i].date.toLocaleDateString() %></h6>
+                    <p class="card-text"><%= '...'+article[i].content.substr(30,60)+'...' %></p>
+                </div>
+                <div class="card-footer">
+
+                    <a href="article/<%= article[i]._id %>" class="card-link btnView p-2">Learn More...</a>
+                    <% if(sess){ %>
+                    <a href="article/edit/<%= article[i]._id %>" class="card-link">edit</a>
+                    <a href="article/delete/<%= article[i]._id %>" class="card-link">delete</a>
+                    <% }%>
+                </div>
+
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+</div>
+
+
+<%- include ("partial/_footer");%>

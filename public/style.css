@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+div,nav{
+    font-family: 'Source Serif Pro', serif;
+}
+.hero-sec{
+    height:400px;
+    background: url('/assets/index-bg.jpg');
+    background-size: cover;
+    animation: changebg 15s infinite alternate;
+}
+@keyframes changebg {
+  0% {
+    background:url('/assets/index-bg.jpg');
+  background-size:cover
+  }
+  20% {
+    background:url('/assets/index-bg.jpg');
+  background-size:cover
+  }
+  40% {
+    background:url('/assets/index-bg.jpg');
+  background-size:cover
+  }
+  60% {
+    background:url('/assets/index-bg2.jpg');
+  background-size:cover
+  }
+  80% {
+    background:url('/assets/index-bg2.jpg');
+  background-size:cover
+  }
+  100% {
+    background:url('/assets/index-bg2.jpg');
+  background-size:cover
+  }
+}
+.btnView{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.card{
+    border-radius: 0px;
+    box-shadow: 0 8px 8px -6px  black;
+}

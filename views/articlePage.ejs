@@ -1,0 +1,25 @@
+<%- include ("partial/_header");%>
+
+<div class="container-fluid hero-sec">
+
+</div>
+
+<div class="container bg-white p-2" style="transform: translateY(-100px)">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>
+                <%= article.title%>
+            </h1>
+            <h6 class="card-subtitle mb-2 text-muted pb-2"><%= article.author %> |
+                <%=  article.date.toLocaleDateString() %></h6>
+            <div class="py-3">
+
+                <%- article.markHtml %>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include ("partial/_footer");%>
